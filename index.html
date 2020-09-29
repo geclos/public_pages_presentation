@@ -19,7 +19,145 @@
 				<section data-markdown>
           <textarea data-template>
             # Public pages
-            Problems and alternative approaches
+            Problems and a proposal
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Problems
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Welcome back to 2008
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Global CSS
+            ```sass
+            .fancyTable {
+              &__header {
+                border-width: 1px;
+                border-style: solid;
+                // ...
+            ```
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Imperative code
+            ```javascript[6,7,14]
+            $('.js-slideshow-item').click(function (){
+            // ...
+
+            var prevSlug = $prevActive.data('slug');
+            var $pevIcon = $prevActive.find('.slideshow__item-icon');
+            var $prevIcon = $prevActive.find('.js-feature-icon');
+            $prevActive.removeClass('slideshow__feature-item--active');
+
+            // ...
+
+            var $activeItem = $(this);
+            var activeSlug = $activeItem.data('slug');
+            var $activeIcon = $activeItem.find('.js-feature-icon');
+            $activeItem.addClass('slideshow__feature-item--active');
+            ```
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Implicit interface
+            ```haml[4,9,11]
+            .page-section
+              .container-fluid
+                .row.team
+                  - @team.keys.each do |key|
+                    .col-xs-6.col-sm-3
+                    - member = @team[key]
+                    - name = member['name']
+                    - social_networks = member['social_networks']
+                    .team-member
+                      .team-member__photo
+                      = lazy_image "public/team/#{key}.jpg"
+            ```
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ### Others
+            - No styleguide
+            - No collocation of CSS JS and HTML
+            - Inconsistent access to ivars in templates
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ### Consequences
+            - Lots of repetition
+            - Brittle code (Class name collisions, magic js classes, no tests...)
+            - **Low productivity**
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## A proposal
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            - Component-based UI
+            - Styleguide
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ### Optimize for development speed
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ### Optimize for development speed
+
+            *Means known tools*
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            - HTML
+            - Javascript
+            - CSS modules (or other namespaced solutions)
+            - React
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            - HTML
+            - Javascript
+            - CSS modules (or other namespaced solutions)
+            - React
+          </textarea>
+        </section>
+				<section>
+          <div>
+            <img width='200px' src='images/gatsby.svg' />
+          </div>
+          <div>
+            <img width='200px' src='images/next.png' />
+          </div>
+        </section>
+        <section>
+          <img width='200px' src='images/next.png' />
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            Pro:
+              - More flexible (runtime)
+              - Easy to pick up
+            Con:
+              - Less performant (marginal)
+              - One more infra to worry about
+              - static vs runtime builds
           </textarea>
         </section>
 			</div>
