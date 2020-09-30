@@ -30,6 +30,7 @@
 				<section data-markdown>
           <textarea data-template>
             ## Welcome back to 2008
+            ![](https://media.giphy.com/media/CdAh3Sh0Mvtdu/giphy.gif)
           </textarea>
         </section>
 				<section data-markdown>
@@ -51,8 +52,8 @@
             $('.js-slideshow-item').click(function (){
             // ...
 
-            var prevSlug = $prevActive.data('slug');
-            var $pevIcon = $prevActive.find('.slideshow__item-icon');
+            p revSlug = $prevActive.data('slug');
+            var $pevIcon = $prevActive.find('.slideshow__item-icod' ;
             var $prevIcon = $prevActive.find('.js-feature-icon');
             $prevActive.removeClass('slideshow__feature-item--active');
 
@@ -68,7 +69,7 @@
 				<section data-markdown>
           <textarea data-template>
             ## Implicit interface
-            ```haml[4,9,11]
+            ```haml[4,10,11]
             .page-section
               .container-fluid
                 .row.team
@@ -77,8 +78,8 @@
                     - member = @team[key]
                     - name = member['name']
                     - social_networks = member['social_networks']
-                    .team-member
-                      .team-member__photo
+                .team-member
+                  .team-member__photo
                       = lazy_image "public/team/#{key}.jpg"
             ```
           </textarea>
@@ -89,6 +90,7 @@
             - No styleguide
             - No collocation of CSS JS and HTML
             - Inconsistent access to ivars in templates
+            - ...
           </textarea>
         </section>
 				<section data-markdown>
@@ -130,14 +132,6 @@
             - React
           </textarea>
         </section>
-				<section data-markdown>
-          <textarea data-template>
-            - HTML
-            - Javascript
-            - CSS modules (or other namespaced solutions)
-            - React
-          </textarea>
-        </section>
 				<section>
           <div>
             <img width='200px' src='images/gatsby.svg' />
@@ -151,13 +145,20 @@
         </section>
 				<section data-markdown>
           <textarea data-template>
-            Pro:
+            - Pro:
               - More flexible (runtime)
+              - Decouple app from public pages
               - Easy to pick up
-            Con:
-              - Less performant (marginal)
+
+            - Con:
+              - Less performant (marginally)
               - One more infra to worry about
-              - static vs runtime builds
+              - static vs runtime builds (sort of)
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Thanks
           </textarea>
         </section>
 			</div>
